@@ -38,7 +38,6 @@ def analize(request):
     for i in posts_id:
         data['post_id'] = i
         response1 = requests.post(BASE_URL+COMMENTS_METHOD_URL, data=data)
-        print(response1.json())
         post_comments = response1.json()['response']['items']
         for j in post_comments:
             authors_id.append(j['from_id'])
@@ -53,7 +52,6 @@ def pie_graphic(authors_id):
     count = dict(Counter(authors_id).most_common())
     labels = list(count.keys())
     values = list(count.values())
-    print(count)
     plt.pie(values, labels=labels)
 
     buffer = BytesIO()
