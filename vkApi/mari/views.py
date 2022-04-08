@@ -14,7 +14,7 @@ load_dotenv()
 plt.switch_backend('Agg')
 VK_TOKEN = os.getenv('TOKEN')
 api_v = 5.92
-BASE_URL = 'https://api.vk.com/method/'
+BASE_URLdfdsfsdfsd = 'https://api.vk.com/method/'
 POST_METHOD_URL = 'wall.get/'
 COMMENTS_METHOD_URL = 'wall.getComments/'
 
